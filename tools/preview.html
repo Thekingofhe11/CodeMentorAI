@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeMentor · Local preview</title>
+  <link rel="stylesheet" href="/preview.css">
+  <script src="/preview.js" defer></script>
+  <script src="/extension/core.js" defer></script>
+  <script src="/extension/glass.js" defer></script>
+  <script src="/extension/visual-loader.js" defer></script>
+  <script src="/extension/content.js" defer></script>
+</head>
+<body>
+  <div class="preview-banner"><strong>LOCAL PREVIEW</strong><span>A practice fixture for CodeMentor. This page is not connected to LeetCode.</span></div>
+  <header class="site-nav">
+    <a href="/problems/two-sum/" class="site-brand" aria-label="LeetCode preview home"><span aria-hidden="true">&lt;/&gt;</span> LeetCode <small>preview</small></a>
+    <nav aria-label="Fixture problems"><a href="/problems/two-sum/" data-problem-link>Two Sum</a><a href="/problems/valid-parentheses/" data-problem-link>Valid Parentheses</a><a href="/problems/binary-search/" data-problem-link>Binary Search</a></nav>
+    <span class="profile" aria-label="Demo profile">C</span>
+  </header>
+  <div class="workspace-heading"><span>‹</span><strong>Problem workspace</strong><span class="workspace-note">Take your time. Make it make sense.</span></div>
+  <main class="workspace">
+    <section class="description-pane" aria-label="Problem description">
+      <div class="pane-tabs"><span class="active">▤ &nbsp;Description</span><span>Notes</span><span>Submissions</span></div>
+      <div class="description-content">
+        <h1 data-cy="question-title"></h1>
+        <div class="problem-meta"><span class="difficulty" diff="easy">Easy</span><span>Topics</span><span>Companies</span></div>
+        <div data-track-load="description_content"></div>
+      </div>
+      <div class="problem-bottom"><span>♡ &nbsp; A little practice every day</span><span>JavaScript</span></div>
+    </section>
+    <section class="code-pane" aria-label="Mock code editor">
+      <div class="pane-tabs"><span class="active">⌘ &nbsp;Code</span><span class="editor-status">Draft · preview only</span></div>
+      <div class="editor-toolbar"><span>JavaScript &nbsp;⌄</span><span>↶ &nbsp; ⛶</span></div>
+      <div class="editor"><pre class="line-numbers" aria-hidden="true">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre><pre id="editor-code"></pre></div>
+      <div class="testcase">
+        <div class="pane-tabs"><span class="active">✓ &nbsp;Testcase</span><span>Test result</span></div>
+        <div class="testcase-content"><span class="case-tag">Case 1</span><p id="case-label"></p><pre id="case-value"></pre></div>
+      </div>
+    </section>
+  </main>
+  <p class="preview-tip">Open “Need a nudge?” to try the mentor. Problem links also test navigation and saved conversations.</p>
+</body>
+</html>

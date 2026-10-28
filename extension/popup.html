@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeMentor AI</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="glass.js" defer></script>
+    <script src="popup.js" defer></script>
+  </head>
+  <body data-glass-surface>
+    <header class="brand">
+      <span class="brand-icon" data-glass-reactive aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="m12 9-7 7 7 7m8-14 7 7-7 7M18 6l-4 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <div><strong>CodeMentor <span>AI</span></strong><p>A little guidance. Your own solution.</p></div>
+    </header>
+    <main>
+      <div class="eyebrow">YOUR THINKING COMPANION</div>
+      <h1>Find your next<br><em>small step.</em></h1>
+      <p class="intro">A mentor beside your LeetCode problem, ready when you need a nudge.</p>
+      <ol class="steps" aria-label="Progressive hint levels">
+        <li data-glass-reactive><span>01</span> Notice</li><li data-glass-reactive><span>02</span> Explore</li><li data-glass-reactive><span>03</span> Connect</li>
+      </ol>
+      <section class="connection" data-glass-reactive aria-labelledby="connection-title">
+        <div class="connection-heading">
+          <span id="status-dot" class="status-dot checking" aria-hidden="true"></span>
+          <strong id="connection-title">Checking connection…</strong>
+          <button id="refresh" class="icon-button" data-glass-reactive type="button" aria-label="Check backend connection" title="Check connection">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 7a6.5 6.5 0 1 0 .3 5M16 3v4h-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <p id="connection-detail" role="status">Looking for your local mentor.</p>
+        <div id="setup" hidden>
+          <p>From the project folder, run:</p>
+          <code>backend\venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000</code>
+        </div>
+      </section>
+      <p id="page-context" class="page-context">Checking the current page…</p>
+      <button id="open-mentor" class="primary" data-glass-reactive type="button" disabled>Open mentor <span aria-hidden="true">↗</span></button>
+      <p id="action-feedback" class="feedback" role="status"></p>
+    </main>
+    <footer>
+      <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 7V5a4 4 0 0 1 8 0v2M3 7h10v7H3V7Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/></svg>
+      Problem context is shared only when you ask.
+    </footer>
+  </body>
+</html>

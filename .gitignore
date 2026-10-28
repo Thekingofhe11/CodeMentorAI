@@ -1,0 +1,16 @@
+backend/venv/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+node_modules/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+backups/
+*.env.dpapi

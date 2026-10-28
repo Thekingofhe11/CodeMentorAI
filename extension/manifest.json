@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "CodeMentor AI",
+  "version": "0.3.0",
+  "description": "A thoughtful LeetCode companion with small hints, guided questions, and full solutions when you ask.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/*"
+      ],
+      "js": [
+        "core.js",
+        "glass.js",
+        "visual-loader.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "styles.css",
+        "assets/visuals.js"
+      ],
+      "matches": [
+        "https://leetcode.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open CodeMentor AI"
+  }
+}
